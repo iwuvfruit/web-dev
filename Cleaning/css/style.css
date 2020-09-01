@@ -17,8 +17,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height:100vh
+    height:100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url('/img/clean.jpg');
+    background-position: center;
+    background-size: cover;
+    color:white;
 }
+
 .nav{
     display:flex;
     justify-content: space-between;
@@ -28,7 +34,7 @@
     left:0;
     right:0;
     z-index: 1; 
-    
+    background-color:black;
     padding:8px 12px;
 }
 
@@ -72,6 +78,235 @@ color:salmon;
     color:salmon;
 }
 
+.sub-nav{
+    position: absolute;
+    top:2em;
+    background-color:salmon;
+    padding:.7em;
+    padding-top:1.7em;
+    width:100%;
+    text-align:center;
+    font-size:1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-section{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:2em;
+
+}
+.title{
+    margin:0;
+    font-size:3rem;
+}
+.sub-title{
+    font-size: 1.5rem;
+    margin-top:.3rem;
+    margin-bottom:.2rem;
+    text-align:center;
+}
+.button {
+    background-color: salmon;
+    border: none;
+    border-radius:.7em;
+    color: white;
+    padding: .9em 2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 100%;
+    margin-top:2.5em;
+    opacity: 0.8;
+
+
+  }
+  .button:hover {
+    background-color: #555555;
+    color: white;
+  }
+  .section{
+    padding: 5rem;
+}
+.section-title{
+    margin:0;
+    margin-bottom:2rem;
+    text-align: center;
+    font-size:2rem;
+    color:salmon;
+}
+.section-accent{
+    background-color: white;
+    padding:1.5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.free-title {
+    margin:0;
+    font-size:2.5rem;
+    text-transform:uppercase;
+}
+.free-sub-title{
+    color:salmon;
+} 
+
+.steps-section{
+    margin-top:2em;
+    margin-bottom:2em;
+}
+.curriculum-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(auto, 450px));
+    justify-content: center;
+    column-gap:50px;
+    row-gap:50px;
+}
+.curriculum-grid-item{
+    display:flex;
+    align-items: center;
+}
+.curriculum-grid-item img{
+    width: 100px;
+    height:100px;
+    margin-right:1rem;
+}
+.guarantee{
+    background-color: #FF9676;    ;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:3em;
+}
+img.people-svg{
+    padding:3em;
+    width:600px;
+}
+
+.pricing{
+    margin:5rem auto;
+}
+.form-section{
+ background-color: #FF9676;   
+ display:flex;
+ justify-content: center;
+ gap:100px;
+ align-items: center;
+ margin:3rem auto;
+ padding-bottom:3rem;
+}
+
+.form{
+    max-width: 900px;
+    margin:0 auto;
+}
+
+
+.form label{
+    font-weight:bold;
+    color:white;
+
+}
+.contact-title{
+    color:white;
+}
+.form input, 
+.form textarea{
+    width:100%;
+    margin-top:.25rem;
+    margin-bottom:.75rem;
+    outline:none;
+    border:1px solid white;
+    border-radius:.75rem;
+    padding:.5rem;
+    color:inherit;
+    font-family:inherit;
+
+}
+.form textarea{
+    resize:vertical;
+    min-height:75px;
+    max-height:200px;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color:black;
+}
+
+.mail{
+    width:300px;
+
+}
+
+
+.pricing-cards-container{
+    display:flex;
+    justify-content: center;
+    gap:100px;
+}
+.card1{
+    margin-right:20px;
+}
+.card2{
+    margin-left:20px;
+}
+.pricing-card{
+    padding:1rem;
+    border:1px solid black;
+    border-radius:.3em;
+    margin:1rem 0;
+}
+
+.price-header{
+    text-align: center;
+    margin-bottom:1.5rem;
+}
+
+.plan-name{
+    font-size:1.5rem;
+    margin-bttom:.5rem;
+}
+.plan-price{
+    font-size:2rem;
+    font-weight: bold;;
+}
+.plan-price::after{
+    content:'/mo';
+    font-size:.75rem;
+    color:#777;
+}
+
+.feature{
+    margin-bottom:.5rem;
+
+}
+.featre.inactive{
+    color:#777;
+    text-decoration:line-through;
+}
+.footer{
+    background:white;
+    color:black;
+    height:100px;
+    position:relative;
+}
+.footer .footer-content{
+    border-bottom:1px solid black;
+    height:100px;
+}
+.footer.footer-bottom{
+    background:white;
+    color:black;
+    height:50px;
+    width:100%;
+    text-align:center;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    padding-top:20px;
+}
 
 @media screen and (max-width:768px) {
     .nav{
