@@ -1,11 +1,15 @@
-* {
+
+  html {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
   }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+ 
   body{
     font-family: 'Source Sans Pro', sans-serif;
-
+    margin: 0px;
+    padding: 0px;
   }
   a{
       text-decoration:none;
@@ -20,6 +24,8 @@
     height:100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
     url('/img/clean.jpg');
+    background-image: 100%;
+    
     background-position: center;
     background-size: cover;
     color:white;
@@ -35,8 +41,10 @@
     right:0;
     z-index: 1; 
     background-color:black;
-    padding:8px 12px;
+    padding-left:1rem;
+    padding-right:1rem;
 }
+
 
 .navbar_logo{
     font-size:24px;
@@ -53,17 +61,15 @@ color:salmon;
 }
 
 .navbar_menu li{
-    padding:8px 12px;
+    padding-left:2rem;
+    padding-right:2rem;
 }
 
-.navbar_menu li:hover{
-    background-color:salmon;
-    border-radius:4px;
-}
+
 
 .navbar_icons{
     list-style:none;
-    color:black;
+    color:salmon;
     display:flex;
     padding-left:0;
 }
@@ -83,8 +89,8 @@ color:salmon;
     top:2em;
     background-color:salmon;
     padding:.7em;
-    padding-top:1.7em;
     width:100%;
+    height:10%;
     text-align:center;
     font-size:1.2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -143,6 +149,8 @@ color:salmon;
     flex-direction: column;
     align-items: center;
 }
+  
+
 .free-title {
     margin:0;
     font-size:2.5rem;
@@ -153,25 +161,30 @@ color:salmon;
 } 
 
 .steps-section{
+    width: 97%;
     margin-top:2em;
     margin-bottom:2em;
+    float: none;
+
 }
-.curriculum-grid{
-    display:grid;
-    grid-template-columns: repeat(3, minmax(auto, 450px));
-    justify-content: center;
-    column-gap:50px;
-    row-gap:50px;
+.step-grid{
+    display:flex;
+    justify-content: space-between;
 }
-.curriculum-grid-item{
+/* .step-grid-item{
+    flex: 0 0 33%;
     display:flex;
     align-items: center;
+} */
+.step-grid-item:first-child{
+    padding-left:5em;
 }
-.curriculum-grid-item img{
-    width: 100px;
-    height:100px;
+.step-grid-item img{
+    max-width: 200px;
+    max-height:200px;
     margin-right:1rem;
 }
+
 .guarantee{
     background-color: #FF9676;    ;
     display:flex;
@@ -188,7 +201,7 @@ img.people-svg{
     margin:5rem auto;
 }
 .form-section{
- background-color: #FF9676;   
+ background-color: #FF6BAB;   
  display:flex;
  justify-content: center;
  gap:100px;
@@ -308,32 +321,77 @@ img.people-svg{
     padding-top:20px;
 }
 
-@media screen and (max-width:768px) {
-    .nav{
-        flex-direction:column ;
-        align-items: flex-start;
-        padding: 8 2  
+
+
+@media (max-width: 575.98px) { 
+    .header{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 550px;
+        }
+    .sub-nav{
+        display: none;
     }
-    .navbar_menu{
-        display:none;
-        flex-direction: column;
-        align-items: center;
-        width:100%;
+    .title{
+        text-align: center;
     }
-    .navbar_menu li {
-        width:100%;
-        text-align:center;
+    .sub-title{
+       display: none;
+
     }
-    .navbar_icons{
-        display:none;
-        justify-content: center;
-        width:100%; 
+ }
+
+@media (max-width: 767.98px) {
+    .header{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 900px;
+
+       
+        }
+
+        .nav{
+            flex-direction:column ;
+            align-items: flex-start;
+            padding: 8 2  
+        }
+        .navbar_menu{
+            display:none;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+        }
+        .navbar_menu li {
+            width:100%;
+            text-align:center;
+        }
+        .navbar_icons{
+            display:none;
+            justify-content: center;
+            width:100%; 
+        }
+        .navbar_toggleBar{
+            display:block;
+        }
+        .navbar_menu.active,
+        .navbar_icons.active {
+            display:flex;
+        }
+        .sub-nav{
+            display: none;
+        }
+        
+        
     }
-    .navbar_toggleBar{
-        display:block;
-    }
-    .navbar_menu.active,
-    .navbar_icons.active {
-        display:flex;
-    }
-}
+
+
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
