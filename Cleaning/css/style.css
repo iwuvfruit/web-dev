@@ -333,6 +333,18 @@ img.people-svg{
     color:#777;
     text-decoration:line-through;
 }
+
+
+.btn-square {
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+  }
 .footer{
     background:white;
     color:black;
@@ -342,6 +354,9 @@ img.people-svg{
 .footer .footer-content{
     border-bottom:1px solid black;
     height:100px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
 }
 .footer.footer-bottom{
     background:white;
